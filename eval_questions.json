@@ -1,0 +1,35 @@
+{
+  "in_scope": [
+    {"q": "How does the original RAG model combine parametric and non-parametric memory?", "paper_ids": ["2005.11401"]},
+    {"q": "What are the Naive, Advanced and Modular RAG paradigms?", "paper_ids": ["2312.10997"]},
+    {"q": "How does Ragas judge whether an answer is grounded in retrieved context without reference answers?", "paper_ids": ["2309.15217"]},
+    {"q": "How do spelling mistakes in questions affect dual-encoder retrievers?", "paper_ids": ["2205.02303"]},
+    {"q": "How can multiple query rewrites improve conversational passage retrieval?", "paper_ids": ["2406.18960"]},
+    {"q": "Can a language model generate questions to rerank retrieved passages without training data?", "paper_ids": ["2204.07496"]},
+    {"q": "What is the benefit of using several positive passages when training dense retrievers?", "paper_ids": ["2508.09534"]},
+    {"q": "What is the difference between single-vector and multi-vector representations in dense retrieval?", "paper_ids": ["2108.06279"]},
+    {"q": "How does masking during pre-training help dense passage retrieval?", "paper_ids": ["2210.15133"]},
+    {"q": "Does what works for retrieving documents also work for retrieving responses in dialogue systems?", "paper_ids": ["2301.05508"]},
+    {"q": "How can a hallucination dataset be generated automatically for large language models?", "paper_ids": ["2310.00259"]},
+    {"q": "Can small language models detect hallucinations?", "paper_ids": ["2506.22486"]},
+    {"q": "Is there an end-to-end tool for mitigating and evaluating hallucinations?", "paper_ids": ["2409.11353"]},
+    {"q": "How do language models acquire factual knowledge during training and when do hallucinations appear?", "paper_ids": ["2503.21676"]},
+    {"q": "How can an attacker tell whether a document is stored in a RAG system's database?", "paper_ids": ["2502.00306"]},
+    {"q": "How does an agentic approach improve faithfulness in religious question answering?", "paper_ids": ["2601.07528"]},
+    {"q": "How can retrieval be improved for code generation?", "paper_ids": ["2402.12317"]},
+    {"q": "How can language models and retrieval help automate literature reviews?", "paper_ids": ["2411.18583"]},
+    {"q": "How is in-context learning used for knowledge base question answering?", "paper_ids": ["2311.02956"]},
+    {"q": "What techniques help question answering models generalize across domains using data augmentation?", "paper_ids": ["1912.02145"]},
+    {"q": "What makes information retrieval in specialised domains different from general search?", "paper_ids": ["2611.08228"]}
+  ],
+  "off_topic": [
+    "What is computer vision?",
+    "Who won the cricket world cup?",
+    "What is a good recipe for biryani?",
+    "How do I train for a marathon?",
+    "What is the capital of Australia?",
+    "What is the best vector database for production use?",
+    "How do I reset my router?",
+    "Who is the prime minister of Japan?"
+  ]
+}

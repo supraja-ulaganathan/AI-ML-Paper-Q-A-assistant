@@ -1,0 +1,374 @@
+{
+  "2506.06962v3": {
+    "id": "2506.06962v3",
+    "title": "AR-RAG: Autoregressive Retrieval Augmentation for Image Generation",
+    "authors": [
+      "Jingyuan Qi",
+      "Zhiyang Xu",
+      "Qifan Wang",
+      "Lifu Huang"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2506.06962v3"
+  },
+  "2504.13684v1": {
+    "id": "2504.13684v1",
+    "title": "Intelligent Interaction Strategies for Context-Aware Cognitive Augmentation",
+    "authors": [
+      "Xiangrong",
+      "Zhu",
+      "Yuan Xu",
+      "Tianjian Liu",
+      "Jingwei Sun"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2504.13684v1"
+  },
+  "2504.17204v1": {
+    "id": "2504.17204v1",
+    "title": "Factually: Exploring Wearable Fact-Checking for Augmented Truth Discernment",
+    "authors": [
+      "Chitralekha Gupta",
+      "Hanjun Wu",
+      "Praveen Sasikumar",
+      "Shreyas Sridhar",
+      "Priambudi Bagaskara"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2504.17204v1"
+  },
+  "2504.14689v1": {
+    "id": "2504.14689v1",
+    "title": "Designing AI Systems that Augment Human Performed vs. Demonstrated Critical Thinking",
+    "authors": [
+      "Katelyn Xiaoying Mei",
+      "Nic Weber"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2504.14689v1"
+  },
+  "2411.18583v1": {
+    "id": "2411.18583v1",
+    "title": "Automated Literature Review Using NLP Techniques and LLM-Based Retrieval-Augmented Generation",
+    "authors": [
+      "Nurshat Fateh Ali",
+      "Md. Mahdi Mohtasim",
+      "Shakil Mosharrof",
+      "T. Gopi Krishna"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2411.18583v1"
+  },
+  "2402.12317v2": {
+    "id": "2402.12317v2",
+    "title": "EVOR: Evolving Retrieval for Code Generation",
+    "authors": [
+      "Hongjin Su",
+      "Shuyang Jiang",
+      "Yuhang Lai",
+      "Haoyuan Wu",
+      "Boao Shi"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2402.12317v2"
+  },
+  "2502.00306v2": {
+    "id": "2502.00306v2",
+    "title": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+    "authors": [
+      "Ali Naseh",
+      "Yuefeng Peng",
+      "Anshuman Suri",
+      "Harsh Chaudhari",
+      "Alina Oprea"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2502.00306v2"
+  },
+  "2309.15217v2": {
+    "id": "2309.15217v2",
+    "title": "Ragas: Automated Evaluation of Retrieval Augmented Generation",
+    "authors": [
+      "Shahul Es",
+      "Jithin James",
+      "Luis Espinosa-Anke",
+      "Steven Schockaert"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2309.15217v2"
+  },
+  "2409.11353v3": {
+    "id": "2409.11353v3",
+    "title": "THaMES: An End-to-End Tool for Hallucination Mitigation and Evaluation in Large Language Models",
+    "authors": [
+      "Mengfei Liang",
+      "Archish Arun",
+      "Zekun Wu",
+      "Cristian Munoz",
+      "Jonathan Lutch"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2409.11353v3"
+  },
+  "2503.21676v2": {
+    "id": "2503.21676v2",
+    "title": "How do language models learn facts? Dynamics, curricula and hallucinations",
+    "authors": [
+      "Nicolas Zucchet",
+      "Jörg Bornschein",
+      "Stephanie Chan",
+      "Andrew Lampinen",
+      "Razvan Pascanu"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2503.21676v2"
+  },
+  "2506.22486v1": {
+    "id": "2506.22486v1",
+    "title": "Hallucination Detection with Small Language Models",
+    "authors": [
+      "Ming Cheung"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2506.22486v1"
+  },
+  "2402.11651v2": {
+    "id": "2402.11651v2",
+    "title": "Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents",
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Xudong Han",
+      "Yixuan Zhang",
+      "Timothy Baldwin"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2402.11651v2"
+  },
+  "2312.10793v3": {
+    "id": "2312.10793v3",
+    "title": "Demystifying Instruction Mixing for Fine-tuning Large Language Models",
+    "authors": [
+      "Renxi Wang",
+      "Haonan Li",
+      "Minghao Wu",
+      "Yuxia Wang",
+      "Xudong Han"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2312.10793v3"
+  },
+  "2304.12244v3": {
+    "id": "2304.12244v3",
+    "title": "WizardLM: Empowering large pre-trained language models to follow complex instructions",
+    "authors": [
+      "Can Xu",
+      "Qingfeng Sun",
+      "Kai Zheng",
+      "Xiubo Geng",
+      "Pu Zhao"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2304.12244v3"
+  },
+  "2310.00259v3": {
+    "id": "2310.00259v3",
+    "title": "AutoHall: Automated Factuality Hallucination Dataset Generation for Large Language Models",
+    "authors": [
+      "Zouying Cao",
+      "Yifei Yang",
+      "XiaoJing Li",
+      "Hai Zhao"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2310.00259v3"
+  },
+  "2510.18439v3": {
+    "id": "2510.18439v3",
+    "title": "Grounding or Guessing? Visual Signals for Detecting Hallucinations in Sign Language Translation",
+    "authors": [
+      "Yasser Hamidullah",
+      "Koel Dutta Chowdhury",
+      "Yusser Al Ghussin",
+      "Shakib Yazdani",
+      "Cennet Oguz"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2510.18439v3"
+  },
+  "1407.5416v1": {
+    "id": "1407.5416v1",
+    "title": "Privacy-Preserving Important Passage Retrieval",
+    "authors": [
+      "Luis Marujo",
+      "José Portêlo",
+      "David Martins de Matos",
+      "João P. Neto",
+      "Anatole Gershman"
+    ],
+    "year": 2014,
+    "url": "http://arxiv.org/abs/1407.5416v1"
+  },
+  "2108.06279v2": {
+    "id": "2108.06279v2",
+    "title": "On Single and Multiple Representations in Dense Passage Retrieval",
+    "authors": [
+      "Craig Macdonald",
+      "Nicola Tonellotto",
+      "Iadh Ounis"
+    ],
+    "year": 2021,
+    "url": "http://arxiv.org/abs/2108.06279v2"
+  },
+  "2210.15133v1": {
+    "id": "2210.15133v1",
+    "title": "Retrieval Oriented Masking Pre-training Language Model for Dense Passage Retrieval",
+    "authors": [
+      "Dingkun Long",
+      "Yanzhao Zhang",
+      "Guangwei Xu",
+      "Pengjun Xie"
+    ],
+    "year": 2022,
+    "url": "http://arxiv.org/abs/2210.15133v1"
+  },
+  "2301.05508v1": {
+    "id": "2301.05508v1",
+    "title": "Do the Findings of Document and Passage Retrieval Generalize to the Retrieval of Responses for Dialogues?",
+    "authors": [
+      "Gustavo Penha",
+      "Claudia Hauff"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2301.05508v1"
+  },
+  "2204.07496v4": {
+    "id": "2204.07496v4",
+    "title": "Improving Passage Retrieval with Zero-Shot Question Generation",
+    "authors": [
+      "Devendra Singh Sachan",
+      "Mike Lewis",
+      "Mandar Joshi",
+      "Armen Aghajanyan",
+      "Wen-tau Yih"
+    ],
+    "year": 2022,
+    "url": "http://arxiv.org/abs/2204.07496v4"
+  },
+  "2406.18960v1": {
+    "id": "2406.18960v1",
+    "title": "A Surprisingly Simple yet Effective Multi-Query Rewriting Method for Conversational Passage Retrieval",
+    "authors": [
+      "Ivica Kostric",
+      "Krisztian Balog"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2406.18960v1"
+  },
+  "2611.08228v1": {
+    "id": "2611.08228v1",
+    "title": "Domain-specific information retrieval",
+    "authors": [
+      "Suzan Verberne",
+      "Florina Piroi",
+      "Allan Hanbury"
+    ],
+    "year": 2026,
+    "url": "http://arxiv.org/abs/2611.08228v1"
+  },
+  "2205.02303v1": {
+    "id": "2205.02303v1",
+    "title": "Analysing the Robustness of Dual Encoders for Dense Retrieval Against Misspellings",
+    "authors": [
+      "Georgios Sidiropoulos",
+      "Evangelos Kanoulas"
+    ],
+    "year": 2022,
+    "url": "http://arxiv.org/abs/2205.02303v1"
+  },
+  "1912.02145v1": {
+    "id": "1912.02145v1",
+    "title": "An Exploration of Data Augmentation and Sampling Techniques for Domain-Agnostic Question Answering",
+    "authors": [
+      "Shayne Longpre",
+      "Yi Lu",
+      "Zhucheng Tu",
+      "Chris DuBois"
+    ],
+    "year": 2019,
+    "url": "http://arxiv.org/abs/1912.02145v1"
+  },
+  "2601.07528v2": {
+    "id": "2601.07528v2",
+    "title": "From RAG to Agentic RAG for Faithful Islamic Question Answering",
+    "authors": [
+      "Gagan Bhatia",
+      "Hamdy Mubarak",
+      "Mustafa Jarrar",
+      "George Mikros",
+      "Fadi Zaraket"
+    ],
+    "year": 2026,
+    "url": "http://arxiv.org/abs/2601.07528v2"
+  },
+  "1706.06749v1": {
+    "id": "1706.06749v1",
+    "title": "Cross-language Learning with Adversarial Neural Networks: Application to Community Question Answering",
+    "authors": [
+      "Shafiq Joty",
+      "Preslav Nakov",
+      "Lluís Màrquez",
+      "Israa Jaradat"
+    ],
+    "year": 2017,
+    "url": "http://arxiv.org/abs/1706.06749v1"
+  },
+  "2311.02956v1": {
+    "id": "2311.02956v1",
+    "title": "In-Context Learning for Knowledge Base Question Answering for Unmanned Systems based on Large Language Models",
+    "authors": [
+      "Yunlong Chen",
+      "Yaming Zhang",
+      "Jianfei Yu",
+      "Li Yang",
+      "Rui Xia"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2311.02956v1"
+  },
+  "2312.10997v5": {
+    "id": "2312.10997v5",
+    "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+    "authors": [
+      "Yunfan Gao",
+      "Yun Xiong",
+      "Xinyu Gao",
+      "Kangxiang Jia",
+      "Jinliu Pan"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2312.10997v5"
+  },
+  "2005.11401v4": {
+    "id": "2005.11401v4",
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "authors": [
+      "Patrick Lewis",
+      "Ethan Perez",
+      "Aleksandra Piktus",
+      "Fabio Petroni",
+      "Vladimir Karpukhin"
+    ],
+    "year": 2020,
+    "url": "http://arxiv.org/abs/2005.11401v4"
+  },
+  "2508.09534v1": {
+    "id": "2508.09534v1",
+    "title": "Improving Dense Passage Retrieval with Multiple Positive Passages",
+    "authors": [
+      "Shuai Chang"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2508.09534v1"
+  }
+}
