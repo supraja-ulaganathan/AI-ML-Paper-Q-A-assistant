@@ -2,9 +2,14 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import json
+import os
 from pathlib import Path
 
 import gradio as gr
+
+from setup_data import ensure_data
+
+ensure_data()   # no-op when the index already exists (built during the Docker build)
 
 from answer import answer
 from nlp_tools import keywords_for_paper, summarize_paper
@@ -74,4 +79,4 @@ with gr.Blocks(title="AI/ML Paper Q&A Assistant") as demo:
         info_btn.click(paper_info, inputs=paper, outputs=[kw_box, sum_box])
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 10000)))

@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 
 import chromadb
-from sentence_transformers import SentenceTransformer
+from embedder import embed
 
 PROCESSED = Path("data/processed")
 CHUNK_WORDS = 200   # chunk size
@@ -49,10 +49,10 @@ for f in sorted(PROCESSED.glob("*.json")):
 
 print(f"Total chunks kept: {len(docs)} (skipped {skipped} reference chunks)")
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
-embeddings = model.encode(
-    docs, batch_size=32, show_progress_bar=True, normalize_embeddings=True
-).tolist()
+embeddings = []
+for i in range(0, len(docs), 256):
+    embeddings += embed(docs[i:i + 256])
+    print(f"Embedded {min(i + 256, len(docs))}/{len(docs)}")
 
 client = chromadb.PersistentClient(path="chroma_db")
 try:

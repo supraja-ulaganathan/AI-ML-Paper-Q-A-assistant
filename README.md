@@ -2,7 +2,7 @@
 
 A retrieval-augmented generation (RAG) app that answers questions about a collection of 21 arXiv papers on RAG, dense retrieval and LLM hallucination. Every answer cites the papers and pages it came from, and the app says so when the papers do not contain the answer. It also summarises a chosen paper and extracts its keywords.
 
-**Live demo:** _coming soon (Hugging Face Spaces)_
+**Live demo:** 
 
 ## Features
 

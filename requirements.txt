@@ -1,10 +1,8 @@
 gradio
-sentence-transformers
 chromadb
-keybert
-transformers
-scikit-learn
+fastembed
 pymupdf
 arxiv
 google-genai
 python-dotenv
+numpy

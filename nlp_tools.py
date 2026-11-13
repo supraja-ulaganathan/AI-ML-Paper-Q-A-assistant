@@ -6,23 +6,9 @@ import re
 import sys
 from pathlib import Path
 
-from keybert import KeyBERT
-from sentence_transformers import SentenceTransformer
-from sklearn.feature_extraction.text import CountVectorizer, ENGLISH_STOP_WORDS
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from answer import llm_text
 
 PROCESSED = Path("data/processed")
-SUM_MODEL = "sshleifer/distilbart-cnn-12-6"   # summarization model (about 1.2 GB download on first use)
-
-_kw_model = None
-_sum_tok = None
-_sum_model = None
-
-EXTRA_STOP = {
-    "arxiv", "preprint", "et", "al", "fig", "figure", "table", "paper", "propose",
-    "proposed", "show", "shows", "also", "however", "work", "approach", "method",
-    "methods", "results", "use", "using", "used", "novel", "present", "presents",
-}
 
 
 def load_paper(paper_id):
@@ -38,40 +24,23 @@ def get_abstract(paper, max_chars=2500):
 
 
 def summarize_paper(paper_id):
-    global _sum_tok, _sum_model
-    if _sum_model is None:
-        _sum_tok = AutoTokenizer.from_pretrained(SUM_MODEL)
-        _sum_model = AutoModelForSeq2SeqLM.from_pretrained(SUM_MODEL)
     text = get_abstract(load_paper(paper_id))
-    inputs = _sum_tok(text, return_tensors="pt", truncation=True, max_length=1024)
-    ids = _sum_model.generate(
-        **inputs, max_length=130, min_length=40, num_beams=4, early_stopping=True
+    out = llm_text(
+        "Summarize this research paper abstract in 3 plain sentences. "
+        "Use only the text given. No LaTeX.\n\n" + text
     )
-    summary = _sum_tok.decode(ids[0], skip_special_tokens=True).strip()
-    return re.sub(r"\s+([.,;:])", r"\1", summary)      # remove the space before punctuation
-
-
-def clean_for_keywords(text):
-    text = re.sub(r"arxiv:\S+", " ", text, flags=re.IGNORECASE)   # arXiv stamps
-    text = re.sub(r"https?://\S+|\S+@\S+", " ", text)              # links and emails
-    return re.sub(r"\s{2,}", " ", text)
+    return out or "The summary service is busy right now. Please try again in a minute."
 
 
 def keywords_for_paper(paper_id, top_n=8):
-    global _kw_model
-    if _kw_model is None:
-        _kw_model = KeyBERT(model=SentenceTransformer("all-MiniLM-L6-v2"))
-    paper = load_paper(paper_id)
-    text = clean_for_keywords(get_abstract(paper, max_chars=3500))   # abstract only
-    vec = CountVectorizer(
-        ngram_range=(1, 2),
-        stop_words=list(ENGLISH_STOP_WORDS | EXTRA_STOP),
-        token_pattern=r"(?u)\b[a-zA-Z][a-zA-Z\-]{2,}\b",             # letters only, no numbers
+    text = get_abstract(load_paper(paper_id), max_chars=3500)
+    out = llm_text(
+        f"List the {top_n} most important keyphrases of this paper abstract. "
+        "Reply with one comma-separated line only, no numbering, no extra words.\n\n" + text
     )
-    kws = _kw_model.extract_keywords(
-        text, vectorizer=vec, use_mmr=True, diversity=0.5, top_n=top_n
-    )
-    return [k for k, _ in kws]
+    if not out:
+        return []
+    return [k.strip() for k in out.replace("\n", ",").split(",") if k.strip()][:top_n]
 
 
 if __name__ == "__main__":
