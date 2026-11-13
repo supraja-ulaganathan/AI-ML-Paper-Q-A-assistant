@@ -1,15 +1,14 @@
 import sys
 
 import chromadb
-from sentence_transformers import SentenceTransformer
+from embedder import embed
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
 client = chromadb.PersistentClient(path="chroma_db")
 collection = client.get_collection("papers")
 
 
 def search(query, k=5, per_paper=2):
-    emb = model.encode([query], normalize_embeddings=True).tolist()
+    emb = embed([query])
     res = collection.query(query_embeddings=emb, n_results=k * 6)
     results, counts = [], {}
     for doc, meta, dist in zip(

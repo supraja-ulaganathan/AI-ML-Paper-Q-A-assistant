@@ -61,6 +61,21 @@ def get_text(resp):
         return (resp.text or "").strip()
 
 
+def llm_text(prompt):
+    """Plain LLM call with model fallback. Returns text, or None if every model failed."""
+    for model_name in MODELS:
+        for attempt in range(2):
+            try:
+                text = get_text(client.models.generate_content(model=model_name, contents=prompt))
+                if text:
+                    return text
+            except Exception as e:
+                if not any(c in str(e) for c in RETRYABLE):
+                    break
+                time.sleep(4 * (attempt + 1))
+    return None
+
+
 def answer(question, k=8):
     log("Searching papers...")
     hits = [h for h in search(question, k=k) if h["score"] >= MIN_SCORE]

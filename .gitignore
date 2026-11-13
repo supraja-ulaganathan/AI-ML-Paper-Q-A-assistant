@@ -3,4 +3,5 @@ __pycache__/
 data/papers/
 data/processed/
 chroma_db/
+models/
 .vscode/
