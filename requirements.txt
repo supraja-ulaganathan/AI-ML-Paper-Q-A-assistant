@@ -1,0 +1,10 @@
+gradio
+sentence-transformers
+chromadb
+keybert
+transformers
+scikit-learn
+pymupdf
+arxiv
+google-genai
+python-dotenv
