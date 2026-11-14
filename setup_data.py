@@ -7,6 +7,8 @@ Usage:
 import json
 import subprocess
 import sys
+import time
+import urllib.request
 from pathlib import Path
 
 BASE = Path(__file__).parent
@@ -25,6 +27,22 @@ def index_exists():
     return db.exists() and any(db.iterdir())
 
 
+def fetch_pdf(url, dest, retries=3):
+    """Download a PDF to `dest`, retrying a few times if arXiv refuses or times out."""
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (paper-qa-assistant)"})
+    last_error = None
+    for attempt in range(1, retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp, open(dest, "wb") as f:
+                f.write(resp.read())
+            return
+        except Exception as e:  # network error, 403, 429, timeout...
+            last_error = e
+            print(f"  download failed (attempt {attempt}/{retries}): {e}")
+            time.sleep(5 * attempt)
+    raise RuntimeError(f"Could not download {url}: {last_error}")
+
+
 def download_papers():
     import arxiv
 
@@ -37,7 +55,10 @@ def download_papers():
         pid = r.get_short_id().replace("/", "_")
         pdf = papers_dir / f"{pid}.pdf"
         if not pdf.exists():
-            r.download_pdf(dirpath=str(papers_dir), filename=f"{pid}.pdf")
+            # Works with every arxiv library version (download_pdf was removed in 2.x)
+            pdf_url = r.pdf_url or (r.entry_id.replace("/abs/", "/pdf/") + ".pdf")
+            fetch_pdf(pdf_url, pdf)
+            time.sleep(3)  # be polite to arXiv
         meta[pid] = {
             "id": pid,
             "title": r.title,
